@@ -4,6 +4,7 @@ import {Tab1Screen} from '../screens/tabs/Tab1Screen';
 import { Text} from 'react-native';
 import TopTabsNavigator from './TopTabsNavigator';
 import { StackNavigator } from './StackNavigator';
+import { IonIcon } from '../components/shared/IonIcon';
 
 
 const Tab = createBottomTabNavigator();
@@ -31,7 +32,8 @@ export const BottomTabsNavigator = () => {
                 name="Tab1"
                 options={{
                     title: 'Tab1',
-                    tabBarIcon: ({color}) => <Text style={{color}}>Tab1</Text>,
+                    tabBarIcon: ({color}) => <IonIcon name="return-up-back-outline" size={20} />
+                    ,
                 }}
                 component={Tab1Screen}
             />
@@ -39,7 +41,7 @@ export const BottomTabsNavigator = () => {
                 name="Tab2"
                 options={{
                     title: 'Tab2',
-                    tabBarIcon: ({color}) => <Text style={{color}}>Tab2</Text>,
+                    tabBarIcon: ({color}) => <IonIcon name="repeat-outline" size={20} />,
                 }}
                 component={TopTabsNavigator}
             />
@@ -47,7 +49,7 @@ export const BottomTabsNavigator = () => {
                 name="Tab3"
                 options={{
                     title: 'Tab3',
-                    tabBarIcon: ({color}) => <Text style={{color}}>Tab3</Text>,
+                    tabBarIcon: ({color}) => <IonIcon name="return-up-forward-outline" size={20} />,
                 }}
                 component={StackNavigator}
                 // component={Tab3Screen}
